@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.3em;
+  font-weight: bolder;
+  line-height: 1em;
+}
+
+.container-body{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: rgb(142, 45, 226);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+body .background{
+  background: #abbaab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  max-height: 50%;
+}
+
+.container {
+  max-width: 35rem;
+  margin: 5rem auto;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 24px 120px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-height: 35rem;
+  border-radius: 10px;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+  outline: none;
+  border-style: double;
+  border-color: rgb(215, 225, 233);
+  border-radius: 10px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  border: none;
+  background: rgb(158, 49, 253);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: rgb(142, 45, 226);
+}
+
+.paragrafo-resultado {
+  background: rgb(138, 42, 223);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  font-size: 0.90em;
+  border-radius: 10px;
+}
+
+.bad {
+  background: rgb(241, 86, 125);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  font-size: 0.90em;
+  border-radius: 10px;
+}
