@@ -25,7 +25,7 @@ body {
   background-size: cover;
   height: 100%;
   left: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
   background: rgb(138, 42, 223);
@@ -116,15 +116,6 @@ body {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 100px) and (max-width: 200px) {
-  .container {
-    width: 10rem;
-  }
-  .title-container {
-    text-align: center;
-    font-size: 1em;
-  }
-}
 
 @media screen and (min-width: 200px) and (max-width: 400px) {
   .container {
