@@ -24,7 +24,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   z-index: 1;
   background: rgb(138, 42, 223);
@@ -38,7 +39,6 @@ body {
 .background{
   background: #ffffff;
   width: 100%;
-  top: 0;
   position: fixed;
   z-index: 2;
   background-position: center;
