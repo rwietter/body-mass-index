@@ -20,12 +20,11 @@ body {
 }
 
 .container-body{
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1;
   background: rgb(138, 42, 223);
@@ -40,9 +39,12 @@ body {
   background: #ffffff;
   width: 100%;
   top: 0;
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  max-height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
 }
 
 .container {
