@@ -1,4 +1,4 @@
-<h2 align="center">BMI or IMC calculator with HTML/CSS/JavaScript</h2>
+<h2 align="center">Body mass index</h2>
 
 
 <h1 align="center">
@@ -9,10 +9,6 @@
   Calculator BMI/IMC Vanilla JavaScript
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rwietter/body-mass-index/">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rwietter/body-mass-index/">
-  
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
@@ -28,6 +24,5 @@ This project is under the MIT license. See the [LICENSE] file (LICENSE.md) for m
 
 by @rwietter :rocket:
 
----
 
 ### [Ir para a página](https://imc-calculator.netlify.com/)
