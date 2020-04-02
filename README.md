@@ -12,11 +12,11 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-## :computer: Projeto
+## :computer: Project
 
 The Calculator to measure the body index was made for studies of vanilla js. But it can be used and does not contain ads.
 
-## :memo: Licença
+## :memo: License
 
 This project is under the MIT license. See the [LICENSE] file (LICENSE.md) for more details.
 
