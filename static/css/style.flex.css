@@ -1,32 +1,27 @@
-@font-face {
-  font-family: 'Dosis';
-  src: url('../../static/fonts/static/Dosis-Regular.ttf');
-  src: url('../../static/fonts/static/Dosis-Regular.ttf?#iefix') format('embedded-opentype')
-       url('../../static/fonts/static/Dosis-Regular.ttf') format('truetype');
+/* --- CSS STYLE --- */
+@font-face{
+  font-family: Gilroy;
+    src: url(../../static/fonts/Gilroy/gilroy-light.otf);
 }
-@font-face {
-  font-family: 'Pacifico';
-  src: url('../../static/fonts/Pacifico-Regular.ttf');
-  src: url('../../static/fonts/Pacifico-Regular.ttf?#iefix') format('embedded-opentype'),
-  url('../../static/fonts/Pacifico-Regular.ttf') format('truetype');
-}
-
-
+    
 :root {
   --primary-color: rgb(255, 255, 255);
   --primary-color-darker: rgb(9, 48, 56);
   --dosis-font: 'Dosis';
+  --gilroy-font: 'Gilroy';
 }
 
-* {
-  box-sizing: border-box;
-  outline: 0;
+/* a cada 1rem será considerado 10px */
+html {
+  font-size: 62,5%;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 1rem;
+  height: 100vh; /* 100% de height não funciona */
 }
 
 /* botton background */
@@ -36,16 +31,22 @@ body {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  height: 50%;
+  height: 50vh;
   background: rgb(138, 42, 223);
 }
 
 /* top background white */
 .background{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   background: var(--primary-color);
   width: 100%;
   height: 100%;
@@ -53,13 +54,19 @@ body {
 
 /* container form */
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  flex: 0 1 1  /* [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]; */;
   padding: 30px;
+  width: 30rem;
   z-index: 2;
-  border-radius: 15px;
+  border-radius: 6px;
   background: var(--primary-color);
+  -webkit-box-shadow: 0 24px 120px rgba(0, 0, 0, 0.2);
   box-shadow: 0 24px 120px rgba(0, 0, 0, 0.2);
 }
 
@@ -67,7 +74,8 @@ body {
 .title-container {
   text-align: center;
   text-decoration: none;
-  font-family: 'Pacifico';
+  font-family: var(--gilroy-font);
+  font-size: 2.5rem;
   font-weight: 400;
   color: #3f3f3f;
 }
@@ -79,7 +87,7 @@ body {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 2.5;
-  font-family: var(--dosis-font);
+  font-family: var(--gilroy-font);
   color: #525252;
   font-weight: 700;
   margin-bottom: 10px;
@@ -87,8 +95,14 @@ body {
 
 /* Input float with icon */
 .flex-icon-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -108,9 +122,9 @@ body {
 .inpt-container {
   height: 50px;
   padding: 0 20px;
-  font-family: var(--dosis-font);
+  font-family: var(--gilroy-font);
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1rem;
   outline: none;
   border-style: double;
   border-color: rgb(215, 225, 233);
@@ -127,13 +141,15 @@ body {
   border: none;
   background: rgb(158, 49, 253);
   color: var(--primary-color);
-  font-family: var(--dosis-font);
+  font-family: var(--gilroy-font);
   font-weight: 500;
   font-size: 1.2em;
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
   margin-top: 30px;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 
@@ -146,9 +162,9 @@ body {
   background: rgb(138, 42, 223);
   color: var(--primary-color);
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 500;
-  font-family: var(--dosis-font);
+  font-family: var(--gilroy-font);
   border-radius: 6px;
 }
 
@@ -159,7 +175,7 @@ body {
   padding: 10px 20px;
   font-size: 1em;
   font-weight: 500;
-  font-family: var(--dosis-font);
+  font-family: var(--gilroy-font);
   border-radius: 6px;
 }
 
@@ -175,69 +191,37 @@ form {
   margin-top: 1%
 }
 
-@media screen and (max-width: 200px){
-  .title-container {
-    font-size: 10vw;
-  }
-}
-
-@media screen and (min-width: 200px){
+@media (max-width: 530px){
   .container{
-    width: 13rem;
-  }
-  .title-container {
-    font-size: 8vw;
-  }
-  .rounded-separator {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    width: 28rem;
   }
 }
-
-@media screen and (min-width: 300px){
-  .container{
-    width: 18rem;
-  }
-}
-
-@media screen and (min-width: 400px) {
+@media (max-width: 480px){
   .container {
     width: 25rem;
   }
-  .title-container {
-    font-size: 5.9vw;
-  }
 }
-
-@media screen and (min-width: 500px) {
+@media (max-width: 430px){
   .container {
-    width: 30rem;
+    width: 22rem;
   }
   .title-container {
-    font-size: 5vw;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .title-container {
-    font-size: 5vw;
+    font-size: 2rem;
   }
 }
-
-@media only screen and (min-width: 768px) {
+@media (max-width: 370px){
+  .container {
+    width: 18rem;
+  }
   .title-container {
-    font-size: 3vw;
+    font-size: 1.8rem;
   }
 }
-
-@media only screen and (min-width: 992px) {
-  .title-container {
-    font-size: 3vw;
+@media (max-width: 300px){
+  .container {
+    width: 16rem;
   }
-}
-
-@media only screen and (min-width: 1200px) {
   .title-container {
-    font-size: 3vw;
+    font-size: 1.6rem;
   }
 }

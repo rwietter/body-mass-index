@@ -1,14 +1,13 @@
-(function () {
+(() => {
   const form = document.getElementById("formulary")
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    let getInputPeso = e.target.querySelector(".peso")
-    let getInputAltura = e.target.querySelector(".altura")
+    const getInputPeso = e.target.querySelector(".peso")
+    const getInputAltura = e.target.querySelector(".altura")
     
-    let peso = Number(getInputPeso.value)
-    let altura = Number(getInputAltura.value)
-
+    const peso = Number(getInputPeso.value)
+    const altura = Number(getInputAltura.value)
     
     if (!peso) {
       setResult("Peso não encontrado", true);
@@ -20,25 +19,25 @@
       return;
     }
 
-    const getIndiceMassaCorporal = getImc(peso, altura).toFixed(2);
-    const levelIndiceMassaCorporal = getLevelImc(getIndiceMassaCorporal);
+    const getIndiceMassaCorporal = setImc(peso, altura).toFixed(2);
+    const levelIndiceMassaCorporal = setLevelImc(getIndiceMassaCorporal);
 
-    const mensagem = `Seu índice IMC é ${getIndiceMassaCorporal}, a faixa é: (${levelIndiceMassaCorporal})`
+    const mensagem = `Seu índice IMC é ${getIndiceMassaCorporal}, a faixa é: <b>${levelIndiceMassaCorporal}</b>`
     setResult(mensagem)
   })
 
-  function getImc(peso, altura) {
+  function setImc(peso, altura) {
     return peso && altura ? peso / (altura ** 2) : false;
   }
 
-  function getLevelImc(levelImcValue) {
+  function setLevelImc(levelImcValue) {
     const levelIMC = ["Abaixo do peso", "Peso normal", "Sobrepeso", "Obesidade grau 1", "Obesidade grau 2", "Obesidade grau 3"]
     if (levelImcValue < 18.5) return levelIMC[0];
-    if (levelImcValue >= 18.5 && levelImcValue <= 24.9) return levelIMC[1];
-    if (levelImcValue >= 25 && levelImcValue <= 29.9) return levelIMC[2];
-    if (levelImcValue >= 30 && levelImcValue <= 34.9) return levelIMC[3];
-    if (levelImcValue >= 35 && levelImcValue <= 39.9) return levelIMC[4];
-    if (levelImcValue >= 40) return levelIMC[5];
+    else if (levelImcValue >= 18.5 && levelImcValue <= 24.9) return levelIMC[1];
+    else if (levelImcValue >= 25 && levelImcValue <= 29.9) return levelIMC[2];
+    else if (levelImcValue >= 30 && levelImcValue <= 34.9) return levelIMC[3];
+    else if (levelImcValue >= 35 && levelImcValue <= 39.9) return levelIMC[4];
+    else if (levelImcValue >= 40) return levelIMC[5];
   }
 
   const createInnerHTMLElement = () => document.createElement('p');
