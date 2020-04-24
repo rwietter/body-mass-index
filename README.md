@@ -14,7 +14,7 @@
 
 ## :computer: Project
 
-The Calculator to measure the body index was made for studies of vanilla js. But it can be used and does not contain ads.
+The Calculator to measure the body index was made for studies of vanilla js.
 
 ## :memo: License
 
