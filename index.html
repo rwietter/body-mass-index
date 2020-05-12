@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/000000/plus.png"/>
+  <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/000000/plus.png" />
   <title>IMC calculator</title>
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"/>
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet" />
   <meta name="Description" content="Calculadora de indice de massa corporal imc">
   <meta name="keywords" content="IMC, calculadora, peso">
 </head>
+
 <body>
-    <div class="background">
-      <section class="container">
-          <h1 class="title-container">Calcule seu IMC</h1>
-          <hr class="rounded-separator" />
-          <form action="/" id="formulary" method="POST">
-            <label class="label-container" for="peso">Peso ( kg )</label>
-            <div class="flex-icon-input">
-              <span class="fas fa-balance-scale"></span>
-              <input class="inpt-container peso" placeholder="Exemplo: 68" type="text" id="peso" name="peso"/>
-            </div>
-            <label class="label-container" for="altura">Altura ( cm )</label>
-            <div class="flex-icon-input">
-              <span class="fas fa-user"></span>
-              <input class="inpt-container altura" placeholder="Exemplo: 1.80" type="text" id="altura" name="altura">
-            </div>
-            <button class="btn button-container" type="submit">Enviar</button>
-          </form>
-          <div id="resultado"></div>
-          <div id="successful-result"></div>
-          <div id="bad"></div>
-        </section>
-     <div class="container-body"></div>
-    </div>
-    <script src="./assets/js/index.js"></script>
-  </body>
+  <div class="background">
+    <section class="container">
+      <h1 class="title-container">Calcule seu IMC</h1>
+      <hr class="rounded-separator" />
+      <form action="/" id="formulary" method="POST">
+        <label class="label-container" for="peso">Peso ( kg )</label>
+        <div class="flex-icon-input">
+          <span class="fas fa-balance-scale"></span>
+          <input class="inpt-container peso" placeholder="Exemplo: 68" type="text" id="peso" name="peso" />
+        </div>
+        <label class="label-container" for="altura">Altura ( cm )</label>
+        <div class="flex-icon-input">
+          <span class="fas fa-user"></span>
+          <input class="inpt-container altura" placeholder="Exemplo: 1.80" type="text" id="altura" name="altura">
+        </div>
+        <button class="btn button-container" type="submit">Enviar</button>
+      </form>
+      <div id="resultado"></div>
+      <div id="successful-result"></div>
+      <div id="bad"></div>
+    </section>
+    <div class="container-body"></div>
+  </div>
+  <script src="./assets/js/index.js"></script>
+</body>
+
 </html>
