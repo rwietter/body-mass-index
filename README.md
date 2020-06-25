@@ -24,7 +24,7 @@ The Calculator to measure the body index was made for studies of vanilla js.
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](LICENSE.md) for more details.
+This project is under the MIT license. See the [LICENSE](LICENSE) for more details.
 
 <hr />
 
