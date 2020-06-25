@@ -16,13 +16,20 @@
 
 The Calculator to measure the body index was made for studies of vanilla js.
 
+## ⚙️ Techs
+
+- Vanilla javascript
+- CSS
+- HTML
+
 ## :memo: License
 
 This project is under the MIT license. See the [LICENSE](LICENSE.md) for more details.
 
----
+<hr />
 
-by @rwietter :rocket:
+<p align="center">by @rwietter :rocket:</p>
 
+<hr />
 
-### [Ir para a página](https://imc-calculator.netlify.com/)
+<p align="center"><a href="https://imc-calculator.netlify.com/" />Go application</p>
