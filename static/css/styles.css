@@ -1,43 +1,33 @@
 /* --- CSS STYLE --- */
-@font-face{
-  font-family: Gilroy;
-    src: url(../../static/fonts/Gilroy/gilroy-light.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&display=swap');
     
 :root {
   --primary-color: rgb(255, 255, 255);
   --primary-color-darker: rgb(9, 48, 56);
-  --dosis-font: 'Dosis';
-  --gilroy-font: 'Gilroy';
-}
-
-/* a cada 1rem será considerado 10px */
-html {
-  font-size: 62,5%;
+  --montserrat-font: 'Montserrat';
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 1rem;
-  height: 100vh; /* 100% de height não funciona */
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* botton background */
-.container-body{
-  background-repeat: repeat;
-  width: 100%;
+.bottom-background{
+  width: 100vw;
   position: absolute;
   bottom: 0;
   z-index: 1;
   height: 50vh;
-  background: rgb(138, 42, 223);
+  background: #222222;
 }
 
 /* top background white */
-.background{
+.top-background{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +40,7 @@ body {
   position: absolute;
   background: var(--primary-color);
   width: 100%;
+  z-index: 0 ;
   height: 100%;
 }
 
@@ -61,10 +52,8 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   padding: 3rem;
-  max-width: 100vw;
-  min-width: 40vw;
   z-index: 2;
   border-radius: 6px;
   background: var(--primary-color);
@@ -76,9 +65,9 @@ body {
 .title-container {
   text-align: center;
   text-decoration: none;
-  font-family: var(--gilroy-font);
-  font-size: max(20px, 5vw);
-  font-weight: 400;
+  font-family: var(--montserrat-font);
+  font-size: clamp(0.1rem, 6vw, 2rem);
+  font-weight: 700;
   color: #3f3f3f;
 }
 
@@ -86,12 +75,12 @@ body {
 .label-container, .button-container {
   text-align: center;
   width: 100%;
-  font-size: max(15px, 1.2vw);
+  font-size: clamp(0.1em, 4vw, 1rem);
   line-height: 2.5;
-  font-family: var(--gilroy-font);
+  font-family: var(--montserrat-font);
   color: #525252;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
 }
 
 /* Input float with icon */
@@ -121,15 +110,19 @@ body {
 }
 
 .inpt-container {
-  height: 50px;
-  padding: 0 20px;
-  font-family: var(--gilroy-font);
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  font-family: var(--montserrat-font);
   font-weight: bold;
-  font-size: max(5px, 1vw);
+  font-size: clamp(0.75rem, 0.5vw, 0.8rem);
   outline: none;
   border-style: double;
   border-color: rgb(215, 225, 233);
   border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .inpt-container:placeholder-shown {
@@ -140,11 +133,11 @@ body {
 /* button submit */
 .button-container {
   border: none;
-  background: rgb(158, 49, 253);
+  background: #222222;
   color: var(--primary-color);
-  font-family: var(--gilroy-font);
+  font-family: var(--montserrat-font);
   font-weight: 500;
-  font-size: max(10px, 1.2vw);
+  font-size: clamp(8px, 2vw, 18px);
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
@@ -152,6 +145,13 @@ body {
   -webkit-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.5s;
+}
+
+.altura:invalid{
+   border: red solid 3px;
+}
+.peso:invalid{
+  border: red solid 3px;
 }
 
 .button-container:hover {
@@ -162,23 +162,23 @@ body {
 
 /* result calc */
 .successful-result {
-  background: rgb(138, 42, 223);
+  background: #5a3dbb;
   color: var(--primary-color);
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 4vw, 1rem);
   font-weight: 500;
-  font-family: var(--gilroy-font);
+  font-family: var(--montserrat-font);
   border-radius: 6px;
 }
 
 /* bad error */
 .bad {
-  background: rgb(241, 86, 125);
+  background: #d23669;
   color: var(--primary-color);
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: clamp(0.5rem, 4vw, 1rem);
   font-weight: 500;
-  font-family: var(--gilroy-font);
+  font-family: var(--montserrat-font);
   border-radius: 6px;
 }
 
@@ -192,9 +192,4 @@ body {
 
 form {
   margin-top: 2vh;
-}
-@media (min-width: 800px){
-  .title-container{
-    font-size: min(42px, 5vw);
-  }
 }

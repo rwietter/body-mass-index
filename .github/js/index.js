@@ -1,24 +1,14 @@
-function imc() {
-  const form = document.getElementById("formulary");
+(() => {
+  const form = document.getElementById("formulary")
   form.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    const getPeso = document.querySelector(".peso")
-    const getAltura = document.querySelector(".altura")
+    const getInputPeso = e.target.querySelector(".peso")
+    const getInputAltura = e.target.querySelector(".altura")
     
-    const peso = Number(getPeso.value)
-    const altura = Number(getAltura.value);
-
-    setData(peso, altura);
-
-    const getIMC = setImc(peso, altura).toFixed(2);
-    const getLevelIMC = setLevelImc(getIMC);
-
-    const mensagem = `Seu índice IMC é ${getIMC}, a faixa é: <b>${getLevelIMC}</b>`
-    setResult(mensagem)
-  })
-
-  function setData(peso, altura){
+    const peso = Number(getInputPeso.value)
+    const altura = Number(getInputAltura.value)
+    
     if (!peso) {
       setResult("Peso não encontrado", true);
       return;
@@ -28,7 +18,13 @@ function imc() {
       setResult("Altura não encontrada", true);
       return;
     }
-  }
+
+    const getIndiceMassaCorporal = setImc(peso, altura).toFixed(2);
+    const levelIndiceMassaCorporal = setLevelImc(getIndiceMassaCorporal);
+
+    const mensagem = `Seu índice IMC é ${getIndiceMassaCorporal}, a faixa é: <b>${levelIndiceMassaCorporal}</b>`
+    setResult(mensagem)
+  })
 
   function setImc(peso, altura) {
     return peso && altura ? peso / (altura ** 2) : false;
@@ -44,22 +40,21 @@ function imc() {
     else if (levelImcValue >= 40) return levelIMC[5];
   }
 
-  function setResult(msg, isValid) {
-    const createElementP = document.createElement('p');
-    
-    const toResult = document.getElementById("resultado")
-    toResult.innerHTML = ''
+  const createInnerHTMLElement = () => document.createElement('p');
 
-    let paragraph = createElementP;
+  function setResult(msg, isValid) {
+    const setUIResult = document.getElementById("resultado")
+    setUIResult.innerHTML = ''
+
+    let getCreateInnerHTMLElement = createInnerHTMLElement();
 
     if (!isValid) {
-      paragraph.classList.add("successful-result")
+      getCreateInnerHTMLElement.classList.add("successful-result")
     } else {
-      paragraph.classList.add("bad")
+      getCreateInnerHTMLElement.classList.add("bad")
     }
 
-    paragraph.innerHTML = msg
-    toResult.appendChild(paragraph)
+    getCreateInnerHTMLElement.innerHTML = msg
+    setUIResult.appendChild(getCreateInnerHTMLElement)
   }
-}
-imc();
+})()

@@ -5,31 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/000000/plus.png" />
-  <title>IMC calculator</title>
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/2929/2929040.svg" />
+  <title>Calculadora IMC</title>
+  <link rel="stylesheet" href="./static/css/styles.css">
+  <link rel="stylesheet" href="./static/css/reset.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet" />
   <meta name="Description" content="Calculadora de indice de massa corporal imc">
   <meta name="keywords" content="IMC, calculadora, peso">
 </head>
 
 <body>
-  <div class="background">
+  <div class="top-background">
     <section class="container">
       <h1 class="title-container">Calcule seu IMC</h1>
       <hr class="rounded-separator" />
-      <form action="/" id="formulary" method="POST">
-        <label class="label-container" for="peso">Peso ( kg )</label>
+      <form action="/" id="formulary" method="POST" autocomplete="off">
+        <label class="label-container" for="peso">Peso: kg</label>
         <div class="flex-icon-input">
           <span class="fas fa-balance-scale"></span>
-          <input class="inpt-container peso" placeholder="Exemplo: 68" type="text" id="peso" name="peso" />
+          <input onchange="isValidPeso" pattern="^(0|[1-9]\d*)(\.\d+)?$" class="inpt-container peso" placeholder="Exemplo: 68.54" type="text" id="peso" name="peso" />
         </div>
-        <label class="label-container" for="altura">Altura ( cm )</label>
+        <label class="label-container" for="altura">Altura: cm</label>
         <div class="flex-icon-input">
           <span class="fas fa-user"></span>
-          <input class="inpt-container altura" placeholder="Exemplo: 1.80" type="text" id="altura" name="altura">
+          <input pattern="^\d[0-9]{0}\.\d[0-9]{1}$" class="inpt-container altura"  placeholder="Exemplo: 1.80" type="text" id="altura" name="altura" onchange="isValidAltura">
         </div>
         <button class="btn button-container" type="submit">Enviar</button>
       </form>
@@ -37,9 +36,9 @@
       <div id="successful-result"></div>
       <div id="bad"></div>
     </section>
-    <div class="container-body"></div>
+    <div class="bottom-background"></div>
   </div>
-  <script src="./assets/js/index.js"></script>
+  <script src="./static/js/index.js"></script>
 </body>
 
 </html>
