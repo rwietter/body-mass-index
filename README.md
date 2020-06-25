@@ -28,8 +28,9 @@ This project is under the MIT license. See the [LICENSE](LICENSE.md) for more de
 
 <hr />
 
-<p align="center">by @rwietter :rocket:</p>
+<p align="center"><a href="https://imc-calculator.netlify.com/" />Go application</p>
 
 <hr />
 
-<p align="center"><a href="https://imc-calculator.netlify.com/" />Go application</p>
+<p align="center">by @rwietter :rocket:</p>
+
