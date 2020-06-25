@@ -32,5 +32,5 @@ This project is under the MIT license. See the [LICENSE](LICENSE.md) for more de
 
 <hr />
 
-<p align="center">by @rwietter :rocket:</p>
+<p align="center"><strong>by @rwietter :rocket:</strong></p>
 
