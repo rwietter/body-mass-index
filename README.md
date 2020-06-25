@@ -2,7 +2,7 @@
 
 
 <h1 align="center">
-    <img alt="DevRadar" title="#delicinha" src="https://github.com/rwietter/body-mass-index/blob/master/static/layout.png" width="800px" />
+    <img alt="DevRadar" title="#delicinha" src="https://github.com/rwietter/body-mass-index/blob/master/static/layout.PNG" width="800px" />
 </h1>
 
 <h4 align="center">
