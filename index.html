@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <div class="top-background">
+  <div class="top-background"></div>
+    <div class="bottom-background"></div>
     <section class="container">
       <h1 class="title-container">Calcule seu IMC</h1>
       <hr class="rounded-separator" />
@@ -23,12 +24,12 @@
         <label class="label-container" for="peso">Peso: kg</label>
         <div class="flex-icon-input">
           <span class="fas fa-balance-scale"></span>
-          <input onchange="isValidPeso" pattern="^(0|[1-9]\d*)(\.\d+)?$" class="inpt-container peso" placeholder="Exemplo: 68.54" type="text" id="peso" name="peso" />
+          <input pattern="^(0|[1-9]\d*)(\.\d+)?$" class="inpt-container peso" placeholder="Exemplo: 68.54" type="text" id="peso" name="peso" />
         </div>
         <label class="label-container" for="altura">Altura: cm</label>
         <div class="flex-icon-input">
           <span class="fas fa-user"></span>
-          <input pattern="^\d[0-9]{0}\.\d[0-9]{1}$" class="inpt-container altura"  placeholder="Exemplo: 1.80" type="text" id="altura" name="altura" onchange="isValidAltura">
+          <input pattern="^\d[0-9]{0}\.\d[0-9]{1}$" class="inpt-container altura"  placeholder="Exemplo: 1.80" type="text" id="altura" name="altura" >
         </div>
         <button class="btn button-container" type="submit">Enviar</button>
       </form>
@@ -36,8 +37,6 @@
       <div id="successful-result"></div>
       <div id="bad"></div>
     </section>
-    <div class="bottom-background"></div>
-  </div>
   <script src="./static/js/index.js"></script>
 </body>
 

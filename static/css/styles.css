@@ -14,34 +14,33 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* botton background */
-.bottom-background{
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  height: 50vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
   background: #222222;
+  align-content: center;
 }
 
 /* top background white */
 .top-background{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
   background: var(--primary-color);
   width: 100%;
-  z-index: 0 ;
-  height: 100%;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  height: 50%;
+}
+
+/* botton background */
+.bottom-background{
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  max-height: 100%;
+  bottom: 0;
+  position: absolute;
+  background: #222222;
 }
 
 /* container form */
@@ -54,11 +53,41 @@ body {
   -ms-flex-flow: column nowrap;
   flex-flow: column wrap;
   padding: 3rem;
-  z-index: 2;
+  z-index: 6;
+  position: absolute;
   border-radius: 6px;
+  width: 40vw;
   background: var(--primary-color);
   -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 90px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+@media(max-width: 900px){
+  .container {
+    width: 60%;
+  }
+}
+
+@media(max-width: 700px){
+  .container {
+    width: 60%;
+  }
+}
+
+@media(max-width: 490px){
+  .container {
+    width: 70%;
+  }
+}
+
+@media(max-width: 413px){
+  .container {
+    width: 90%;
+  }
 }
 
 /* title */
@@ -66,7 +95,7 @@ body {
   text-align: center;
   text-decoration: none;
   font-family: var(--montserrat-font);
-  font-size: clamp(0.1rem, 6vw, 2rem);
+  font-size: clamp(0.1rem, 4vw, 2rem);
   font-weight: 700;
   color: #3f3f3f;
 }
@@ -99,7 +128,7 @@ body {
 .flex-icon-input > span {
   position: absolute;
   padding: 18px;
-  font-size: 0.8em;
+  font-size: clamp(0.4em, 4vw, 0.8em);
   color: #525252;
 }
 
@@ -128,6 +157,7 @@ body {
 .inpt-container:placeholder-shown {
   outline: none;
   font-weight: 100;
+  font-size: clamp(0.1rem, 4vw, 0.9rem);
 }
 
 /* button submit */
@@ -137,7 +167,7 @@ body {
   color: var(--primary-color);
   font-family: var(--montserrat-font);
   font-weight: 500;
-  font-size: clamp(8px, 2vw, 18px);
+  font-size: clamp(8px, 4vw, 1.2rem);
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
