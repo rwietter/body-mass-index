@@ -18,7 +18,12 @@ function imc() {
     setResult(mensagem)
   })
 
-  function setData(peso, altura){
+  function setData(peso, altura) {
+    if (!peso && !altura) {
+      setResult("Peso e Altura não encontrados, por favor insira os dados no local acima!", true);
+      return;
+    }
+
     if (!peso) {
       setResult("Peso não encontrado", true);
       return;
