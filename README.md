@@ -2,7 +2,7 @@
 
 
 <h1 align="center">
-    <img alt="DevRadar" title="#delicinha" src="https://github.com/rwietter/body-mass-index/blob/master/static/layout.png" width="800px" />
+    <img alt="DevRadar" title="#delicinha" src="https://github.com/rwietter/body-mass-index/blob/master/static/layout.PNG" width="800px" />
 </h1>
 
 <h4 align="center">
@@ -16,13 +16,21 @@
 
 The Calculator to measure the body index was made for studies of vanilla js.
 
+## ⚙️ Techs
+
+- Vanilla javascript
+- CSS
+- HTML
+
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](LICENSE.md) for more details.
+This project is under the MIT license. See the [LICENSE](LICENSE) for more details.
 
----
+<hr />
 
-by @rwietter :rocket:
+<p align="center"><a href="https://imc-calculator.netlify.com/">Go application</a></p>
 
+<hr />
 
-### [Ir para a página](https://imc-calculator.netlify.com/)
+<p align="center"><strong>by @rwietter :rocket:</strong></p>
+
