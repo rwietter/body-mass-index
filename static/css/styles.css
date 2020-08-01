@@ -1,6 +1,10 @@
 /* --- CSS STYLE --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&display=swap");
-*, *::after, *::before, body, html {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&display=swap');
+*,
+*::after,
+*::before,
+body,
+html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -14,13 +18,12 @@ body {
   height: 100vh;
   width: 100%;
   background: #222222;
-  align-content: center;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  position: relative;
+  overflow: hidden;
   align-items: center;
 }
 
@@ -33,34 +36,21 @@ body {
   height: 50%;
 }
 
-/* botton background */
-.bottom-background {
-  display: flex;
-  width: 100%;
-  height: 50%;
-  max-height: 100%;
-  bottom: 0;
-  position: absolute;
-  background: #222222;
-}
-
 /* container form */
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
+  max-width: 40%;
+  min-width: 25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header';
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
   flex-flow: column wrap;
   padding: 3rem;
-  z-index: 6;
   position: absolute;
   border-radius: 6px;
-  min-width: 30rem;
-  max-width: 35rem;
   margin: 0 10px;
-  height: max-content;
   background: white;
   -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 90px rgba(0, 0, 0, 0.2);
@@ -70,29 +60,11 @@ body {
   -o-border-radius: 6px;
 }
 
-@media screen and (max-width: 505px){
-  .container {
-    min-width: 25rem;
-  }
-}
-
-@media screen and (max-width: 417px){
-  .container {
-    min-width: 20rem;
-  }
-}
-
-@media screen and (max-width: 345px){
-  .container {
-    min-width: 15rem;
-  }
-}
-
 /* title */
 .title-container {
   text-align: center;
   text-decoration: none;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: clamp(1.2rem, 1rem + 1vw, 3rem);
   font-weight: 700;
   color: #3f3f3f;
@@ -100,12 +72,13 @@ body {
 }
 
 /* label title peso and altura */
-.label-container, .button-container {
+.label-container,
+.button-container {
   text-align: center;
   width: 100%;
   font-size: clamp(0.75rem, 1rem + 1vw, 1rem);
   line-height: 2;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   color: #3f3f3f;
   font-weight: 400;
   margin-bottom: 1vh;
@@ -137,7 +110,7 @@ body {
   margin-bottom: 15px;
   height: 3.125rem;
   padding: 0 1.25rem;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: clamp(0.5rem, 1rem + 1vw, 0.8rem);
   outline: none;
   border-style: none;
@@ -160,7 +133,7 @@ body {
   border: none;
   background: #222222;
   color: white;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-weight: 500;
   font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
   text-align: center;
@@ -178,18 +151,19 @@ body {
   box-shadow: 0 0em 20px rgba(0, 0, 0, 0.3);
 }
 
-.altura:invalid, .peso:invalid {
+.altura:invalid,
+.peso:invalid {
   border: #d23669 solid 3px;
 }
 
 /* result calc */
 .successful-result {
-  background: #5A3DBB;
+  background: #5a3dbb;
   color: white;
   padding: 10px 20px;
   font-size: clamp(0.8rem, 1rem + 1vw, 1rem);
   font-weight: 400;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   border-radius: 6px;
   margin: 0.5rem 0 0 0;
 }
@@ -201,7 +175,7 @@ body {
   padding: 10px 20px;
   font-size: clamp(0.5rem, 1rem + 1vw, 1rem);
   font-weight: 400;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   border-radius: 6px;
   margin: 0.5rem 0 0 0;
 }
