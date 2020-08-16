@@ -112,7 +112,7 @@ body {
 .label-container, .button-container {
   text-align: center;
   width: 100%;
-  font-size: clamp(0.3em, 3vw, 1rem);
+  font-size: clamp(12px, 3vw, 16px);
   line-height: 2;
   font-family: $montserrat-font;
   color: $tertiary-color;
@@ -178,14 +178,14 @@ body {
   color: $primary-color;
   font-family: $montserrat-font;
   font-weight: 500;
-  font-size: clamp(8px, 4vw, 1.2rem);
+  font-size: clamp(12px, 3vw, 1.2rem);
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
   margin-top: 30px;
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  height: 3rem;
+  transition: all 0.3s;
 
   &:hover {
     opacity: 0.9;
@@ -193,7 +193,7 @@ body {
     box-shadow: 0 0em 20px rgba(0, 0, 0, 0.3);
   }
   &.is-shadow:focus {
-    box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.3);
   }
 }
 
@@ -202,27 +202,37 @@ body {
 }
 
 /* result calc */
+@mixin box-shadow-result {
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(51,51,51,0.86);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(51,51,51,0.86);
+  box-shadow: 0px 0px 6px -1px rgba(51,51,51,0.86);
+}
+
 .successful-result {
   background: $quinary-color;
   color: $primary-color;
   padding: 10px 20px;
-  font-size: clamp(0.3rem, 3vw, 0.9rem);
+  font-size: clamp(12px, 3vw, 1rem);
   font-weight: 400;
   font-family: $montserrat-font;
   border-radius: 6px;
   margin: 0.5rem 0 0 0;
+  @include box-shadow-result();
 }
+
+
 
 /* bad error */
 .bad {
   background: $quaternary-color;
   color: $primary-color;
   padding: 10px 20px;
-  font-size: clamp(0.3rem, 3vw, 0.9rem);
+  font-size: clamp(12px, 3vw, 1rem);
   font-weight: 400;
   font-family: $montserrat-font;
   border-radius: 6px;
   margin: 0.5rem 0 0 0;
+  @include box-shadow-result();
 }
 
 /* separator title of form */
