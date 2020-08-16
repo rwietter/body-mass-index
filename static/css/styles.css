@@ -38,8 +38,8 @@ body {
 
 /* container form */
 .container {
-  width: 100%;
-  max-width: 40%;
+  width: 1200px;
+  max-width: 30rem;
   min-width: 25rem;
   display: grid;
   grid-template-columns: 1fr;
